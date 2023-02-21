@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="02/21/2023 11:19:29" ReportInfo.Modified="02/21/2023 12:34:28" ReportInfo.CreatorVersion="2023.1.0.0">
+  <Dictionary>
+    <BusinessObjectDataSource Name="Customers" ReferenceName="Customers" DataType="null" Enabled="true">
+      <Column Name="CustCode" DataType="System.String"/>
+      <Column Name="CustName" DataType="System.String"/>
+      <Column Name="CustCity" DataType="System.String"/>
+      <Column Name="WorkingArea" DataType="System.String"/>
+      <Column Name="CustCountry" DataType="System.String"/>
+      <Column Name="Grade" DataType="System.String"/>
+      <Column Name="OpeningAmt" DataType="System.String"/>
+      <Column Name="ReceiveAmt" DataType="System.String"/>
+      <Column Name="PaymentAmt" DataType="System.String"/>
+      <Column Name="OutstandingAmt" DataType="System.String"/>
+      <Column Name="PhoneNo" DataType="System.String"/>
+      <Column Name="Active" DataType="System.String"/>
+    </BusinessObjectDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text1" Left="292.95" Top="9.45" Width="198.45" Height="18.9" Text="Test App Report" Font="Arial, 14pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35">
+      <TextObject Name="Text3" Left="37.8" Top="9.45" Width="94.5" Height="18.9" Text="ID" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text5" Left="151.2" Top="9.45" Width="94.5" Height="18.9" Text="Name" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text7" Left="274.05" Top="9.45" Width="94.5" Height="18.9" Text="Salary" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text9" Left="415.8" Top="9.45" Width="94.5" Height="18.9" Text="Contact" Font="Arial, 12pt, style=Bold"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="74.15" Width="718.2" Height="37.8">
+      <DataBand Name="Data1" Top="115.95" Width="718.2" Height="37.8" DataSource="Customers">
+        <TextObject Name="Text2" Left="18.9" Top="9.45" Width="122.85" Height="18.9" Text="[Customers.CustCode]" Font="Arial, 10pt"/>
+        <TextObject Name="Text4" Left="151.2" Top="9.45" Width="122.85" Height="18.9" Text="[Customers.CustName]" Font="Arial, 10pt"/>
+        <TextObject Name="Text6" Left="274.05" Top="9.45" Width="122.85" Height="18.9" Text="[Customers.ReceiveAmt]" Font="Arial, 10pt"/>
+        <TextObject Name="Text8" Left="415.8" Top="9.45" Width="122.85" Height="18.9" Text="[Customers.PhoneNo]" Font="Arial, 10pt"/>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter1" Top="157.75" Width="718.2" Height="37.8"/>
+    </GroupHeaderBand>
+    <PageFooterBand Name="PageFooter1" Top="199.55" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>
